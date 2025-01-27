@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   patch "/songs/:id" => "songs#update"
   delete "/songs/:id" => "songs#delete"
 
+  get "/artists" => "artists#index"
+  get "/artists/:id" => "artists#show"
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
