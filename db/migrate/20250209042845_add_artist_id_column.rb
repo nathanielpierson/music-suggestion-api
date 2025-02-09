@@ -3,4 +3,3 @@ class AddArtistIdColumn < ActiveRecord::Migration[7.2]
     add_column :songs, :artist_id, :string
   end
 end
-, m

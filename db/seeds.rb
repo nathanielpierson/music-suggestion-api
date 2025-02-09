@@ -7,3 +7,18 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+artist = Artist.new(name: "The Fall of Troy")
+artist.save
+artist = Artist.new(name: "Northlane")
+artist.save
+artist = Artist.new(name: "Say Anything")
+artist.save
+artist = Artist.new(name: "Waterparks")
+artist.save
+artist = Artist.new(name: "Boston Manor")
+artist.save
+artist = Artist.new(name: "L.S. Dunes")
+artist.save
+artist = Artist.new(name: "Reliqa")
+artist.save

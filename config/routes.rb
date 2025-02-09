@@ -17,6 +17,12 @@ Rails.application.routes.draw do
   get "/artists" => "artists#index"
   get "/artists/:id" => "artists#show"
 
+  get "/albums" => "albums#index"
+  get "/albums/:id" => "albums#show"
+  post "/albums" => "albums#create"
+  patch "/albums/:id" => "albums#update"
+  delete "/albums/:id" => "albums#delete"
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
