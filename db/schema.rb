@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_27_151930) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_09_042845) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,5 +28,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_27_151930) do
     t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist_id"
   end
 end
