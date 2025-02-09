@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get "/artists" => "artists#index"
   get "/artists/:id" => "artists#show"
+  post "/songs" => "songs#create"
+  patch "/songs/:id" => "songs#update"
+  delete "/songs/:id" => "songs#delete"
 
   get "/albums" => "albums#index"
   get "/albums/:id" => "albums#show"
