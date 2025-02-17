@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
+  post "/sessions" => "sessions#create"
+
   get "/songs" => "songs#index"
   get "/songs/:id" => "songs#show"
   post "/songs" => "songs#create"
