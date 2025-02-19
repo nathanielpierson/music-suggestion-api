@@ -6,9 +6,10 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.create(
       title: params[:title],
-      artist: params[:artist],
       year: params[:year],
-      genre: params[:genre]
+      genre: params[:genre],
+      artist_id: params[:artist_id],
+      img_url: params[:img_url]
     )
     render :show
   end
@@ -20,9 +21,10 @@ class AlbumsController < ApplicationController
     @album = Album.find_by(id: params[:id])
     @album.update(
       title: params[:title],
-      artist: params[:artist],
       year: params[:year],
-      genre: params[:genre]
+      genre: params[:genre],
+      artist_id: params[:artist_id],
+      img_url: params[:image_url]
     )
     render :show
   end
