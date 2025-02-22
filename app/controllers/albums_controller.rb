@@ -15,7 +15,6 @@ class AlbumsController < ApplicationController
   end
   def show
     @album = Album.find_by(id: params[:id])
-    artist = @album.artist
     render :show
   end
   def update
