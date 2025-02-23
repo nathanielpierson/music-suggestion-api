@@ -1,14 +1,26 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.all
-    render :index
+    album_array = []
+    x = 1
+    while x < 200
+    current_album = Album.find_by(id: x)
+    if current_album != nil
+      album_array.push(current_album)
+    end
+    x +=1
+    end
+    album_count = album_array.length
+    y = rand(0...album_count)
+    @four_suggestions = [ album_array[rand(0...album_count)], album_array[rand(0...album_count)], album_array[rand(0...album_count)], album_array[rand(0...album_count)] ]
+
+  render json: @four_suggestions
   end
   def create
     @album = Album.create(
       title: params[:title],
       year: params[:year],
       genre: params[:genre],
-      artist_id: params[:artist_id],
+      artist: params[:artist],
       img_url: params[:img_url]
     )
     render :show
@@ -23,7 +35,7 @@ class AlbumsController < ApplicationController
       title: params[:title],
       year: params[:year],
       genre: params[:genre],
-      artist_id: params[:artist_id],
+      artist: params[:artist],
       img_url: params[:image_url]
     )
     render :show
