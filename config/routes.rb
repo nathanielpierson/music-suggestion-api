@@ -13,25 +13,25 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "home/songs" => "songs#index"
-  get "home/songs/:id" => "songs#show"
-  post "home/songs" => "songs#create"
-  patch "home/songs/:id" => "songs#update"
-  delete "home/songs/:id" => "songs#delete"
+  get "songs" => "songs#index"
+  get "songs/:id" => "songs#show"
+  post "songs" => "songs#create"
+  patch "songs/:id" => "songs#update"
+  delete "songs/:id" => "songs#delete"
 
-  get "home/songs" => "songs#index"
-  get "home/songs/:id" => "songs#show"
-  post "home/songs" => "songs#create"
-  patch "home/songs/:id" => "songs#update"
-  delete "home/songs/:id" => "songs#delete"
+  get "songs" => "songs#index"
+  get "songs/:id" => "songs#show"
+  post "songs" => "songs#create"
+  patch "songs/:id" => "songs#update"
+  delete "songs/:id" => "songs#delete"
 
-  get "/albums" => "albums#index"
-  get "/albums/:id" => "albums#show"
-  post "/albums" => "albums#create"
-  patch "/albums/:id" => "albums#update"
-  delete "/albums/:id" => "albums#delete"
+  get "albums" => "albums#index"
+  get "albums/:id" => "albums#show"
+  post "albums" => "albums#create"
+  patch "albums/:id" => "albums#update"
+  delete "albums/:id" => "albums#delete"
 
-  get "/random" => "albums#random"
+  # get "/random" => "albums#random"
 
   # Defines the root path route ("/")
   # root "posts#index"
