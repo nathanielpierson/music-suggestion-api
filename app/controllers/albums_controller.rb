@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   def index
     album_array = []
     x = 1
-    while x < 200
+    while x < 50
     current_album = Album.find_by(id: x)
     if current_album != nil
       album_array.push(current_album)
@@ -11,9 +11,17 @@ class AlbumsController < ApplicationController
     end
     album_count = album_array.length
     y = rand(0...album_count)
-    @four_suggestions = [ album_array[rand(0...album_count)], album_array[rand(0...album_count)], album_array[rand(0...album_count)], album_array[rand(0...album_count)] ]
+    @six_suggestions = []
+    z = 0
+    while z < 6
+    current_index = rand(0...album_count)
+    @six_suggestions.push(album_array[current_index])
+    album_array.delete_at(current_index)
+    album_count -= 1
+    z += 1
+    end
 
-  render json: @four_suggestions
+  render json: @six_suggestions
   end
   def create
     @album = Album.create(
