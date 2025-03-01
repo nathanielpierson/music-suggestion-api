@@ -52,4 +52,9 @@ class SongsController < ApplicationController
     song.destroy
     render json: "song deleted"
   end
+  def find_image
+    h = Album.find_by(id: 3)
+    @song = h
+    render :show
+  end
 end

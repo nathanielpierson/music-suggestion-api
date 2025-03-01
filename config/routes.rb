@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get "songs" => "songs#index"
   get "songs/:id" => "songs#show"
+  get "songs/images/:id" => "songs#find_image"
   post "songs" => "songs#create"
   patch "songs/:id" => "songs#update"
   delete "songs/:id" => "songs#delete"
@@ -30,6 +31,8 @@ Rails.application.routes.draw do
   post "albums" => "albums#create"
   patch "albums/:id" => "albums#update"
   delete "albums/:id" => "albums#delete"
+
+
 
   # get "/random" => "albums#random"
 
