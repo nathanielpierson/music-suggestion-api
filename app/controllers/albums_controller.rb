@@ -1,5 +1,9 @@
 class AlbumsController < ApplicationController
   def index
+    Album.all
+    render :index
+  end
+  def index_random
     album_array = []
     x = 1
     while x < 50

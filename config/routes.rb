@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "songs" => "songs#index"
-  get "songs/:id" => "songs#show"
-  post "songs" => "songs#create"
-  patch "songs/:id" => "songs#update"
-  delete "songs/:id" => "songs#delete"
+  get "artists" => "artists#index"
+  get "artists/:id" => "artists#show"
+  post "artists" => "artists#create"
+  patch "artists/:id" => "artists#update"
+  delete "artists/:id" => "artists#delete"
 
   get "songs" => "songs#index"
   get "songs/:id" => "songs#show"
