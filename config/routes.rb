@@ -20,13 +20,15 @@ Rails.application.routes.draw do
   delete "artists/:id" => "artists#delete"
 
   get "songs" => "songs#index"
-  get "songs/:id" => "songs#show"
+  get "songs/random" => "songs#index_random"
   get "songs/images/:id" => "songs#find_image"
+  get "songs/:id" => "songs#show"
   post "songs" => "songs#create"
   patch "songs/:id" => "songs#update"
   delete "songs/:id" => "songs#delete"
 
   get "albums" => "albums#index"
+  get "albums/random" => "albums#index_random"
   get "albums/:id" => "albums#show"
   post "albums" => "albums#create"
   patch "albums/:id" => "albums#update"

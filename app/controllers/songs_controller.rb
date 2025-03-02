@@ -1,5 +1,9 @@
 class SongsController < ApplicationController
-  def index
+def index
+@songs = Song.all
+render :index
+end
+  def index_random
     song_array = []
     x = 1
     while x < 50
@@ -53,8 +57,8 @@ class SongsController < ApplicationController
     render json: "song deleted"
   end
   def find_image
-    h = Album.find_by(id: 3)
-    @song = h
+    @song = Song.find_by(id: params[:id])
+    @album = Album.find_by(id: @song.album_id)
     render :show
   end
 end
