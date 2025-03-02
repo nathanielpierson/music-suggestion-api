@@ -58,7 +58,7 @@ end
   end
   def find_image
     @song = Song.find_by(id: params[:id])
-    @album = Album.find_by(id: @song.album_id)
+    @song = @song["album"]
     render :show
   end
 end
