@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   get "artists" => "artists#index"
+  get "artists/random" => "artists#index_random"
   get "artists/:id" => "artists#show"
   post "artists" => "artists#create"
   patch "artists/:id" => "artists#update"
