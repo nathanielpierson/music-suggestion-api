@@ -33,7 +33,7 @@ end
   def create
     @song = Song.create(
       title: params[:title],
-      album: params[:album],
+      album_id: params[:album_id],
       artist: params[:artist],
       year: params[:year],
       genre: params[:genre]
